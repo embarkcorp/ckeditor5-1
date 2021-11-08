@@ -35,72 +35,53 @@ export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
-	Essentials,
-	UploadAdapter,
-	Autoformat,
-	Bold,
-	Italic,
+	Alignment,
+	AutoImage,
+	AutoLink,
+	Base64UploadAdapter,
 	BlockQuote,
-	CKFinder,
-	CloudServices,
-	EasyImage,
+	Bold,
+	Code,
+	Essentials,
+	FindAndReplace,
+	FontBackgroundColor,
+	FontColor,
+	FontFamily,
+	FontSize,
+	GeneralHtmlSupport,
 	Heading,
 	Image,
 	ImageCaption,
+	ImageInsert,
+	ImageResize,
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
 	Indent,
+	IndentBlock,
+	Italic,
 	Link,
+	LinkImage,
 	List,
+	ListStyle,
 	MediaEmbed,
+	MediaEmbedToolbar,
 	Paragraph,
 	PasteFromOffice,
+	RemoveFormat,
+	SourceEditing,
+	SpecialCharacters,
+	SpecialCharactersCurrency,
+	SpecialCharactersEssentials,
+	SpecialCharactersText,
+	Strikethrough,
+	Subscript,
+	Superscript,
 	Table,
+	TableCaption,
+	TableCellProperties,
+	TableProperties,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	Underline
 ];
-
-// Editor configuration.
-ClassicEditor.defaultConfig = {
-	toolbar: {
-		items: [
-			'heading',
-			'|',
-			'bold',
-			'italic',
-			'link',
-			'bulletedList',
-			'numberedList',
-			'|',
-			'outdent',
-			'indent',
-			'|',
-			'uploadImage',
-			'blockQuote',
-			'insertTable',
-			'mediaEmbed',
-			'undo',
-			'redo'
-		]
-	},
-	image: {
-		toolbar: [
-			'imageStyle:inline',
-			'imageStyle:block',
-			'imageStyle:side',
-			'|',
-			'toggleImageCaption',
-			'imageTextAlternative'
-		]
-	},
-	table: {
-		contentToolbar: [
-			'tableColumn',
-			'tableRow',
-			'mergeTableCells'
-		]
-	},
-	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en'
-};
